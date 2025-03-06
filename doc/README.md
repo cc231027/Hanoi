@@ -90,4 +90,3 @@ This project is licensed under the MIT License. You are free to use, modify, and
 * .NET Documentation - Microsoft Docs
 * Tower of Hanoi Wiki - Wikipedia
 * C# Stack Class - Microsoft Docs
-```
