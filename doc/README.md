@@ -1,3 +1,5 @@
+It looks like the formatting issue might be due to the way the Markdown is rendered. Here is the complete `README.md` file with proper formatting to ensure the titles are bold and visible:
+
 ```markdown
 # Tower of Hanoi
 
@@ -66,7 +68,7 @@ To contribute:
    ```
 3. Commit your changes:
    ```sh
-   git commit -m 'commit message'
+   git commit -m 'Add some NewFeature'
    ```
 4. Push to the branch:
    ```sh
@@ -75,17 +77,19 @@ To contribute:
 5. Open a Pull Request
 
 ## License 
-This project is licensed under the MIT License. You are free to use, modify, and distribute.
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software. See the full license text in the `LICENSE` file.
 
 ## Contact
 * Augustine Onyirioha - cc231027@fhstp.ac.at
-* Project Link: [Tower of Hanoi](https://github.com/cc231027/Hanoi)
+* Project Link: Tower of Hanoi
 
 ## Acknowledgments
 * FH St. Pölten
 * Dr. Yun
 * Dr. Victor
-* .NET Documentation - [Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/)
-* Tower of Hanoi Wiki - [Wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
-* C# Stack Class - [Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.stack?view=net-8.0)
+* .NET Documentation - Microsoft Docs
+* Tower of Hanoi Wiki - Wikipedia
+* C# Stack Class - Microsoft Docs
 ```
+
+You can copy and paste this into your `README.md` file. Let me know if you need any further assistance!
