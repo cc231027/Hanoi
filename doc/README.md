@@ -78,7 +78,7 @@ To contribute:
 This project is licensed under the MIT License. You are free to use, modify, and distribute.
 
 ## Contact
-* Augustine Onyirioha - [Email:](https://cc231027@fhstp.ac.at)
+* Augustine Onyirioha - cc231027@fhstp.ac.at
 * Project Link: [Tower of Hanoi](https://github.com/cc231027/Hanoi)
 
 ## Acknowledgments
