@@ -6,11 +6,11 @@ The **Tower of Hanoi** is a classic puzzle that involves three pegs (**L**, **M*
 2. A **larger disk cannot be placed on top of a smaller disk**.
 3. The **Middle Peg (M)** can be used as an auxiliary peg.
 
-In this project, we implemented **two solutions**:
+In this project, I implemented **two solutions**:
 - **Recursive Solution**
 - **Iterative Solution (Using a Stack)**  
 
-Additionally, we added **ASCII art visualization** to show the movement of disks in the console.
+Additionally, I added **ASCII art visualization** to show the movement of disks in the console.
 
 ---
 
