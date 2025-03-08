@@ -1,26 +1,25 @@
-# Tower of Hanoi Report
+```md
+# 📜 Tower of Hanoi Report
 
 ## 1. Introduction
-The **Tower of Hanoi** is a puzzle that consists of three pegs (`L`, `M`, and `R`) and several disks of different sizes. The goal is to move all the disks from the **Left Peg (`L`)** to the **Right Peg (`R`)**, following these rules:
-
-1. You can move **only one disk at a time**.
+The **Tower of Hanoi** is a classic puzzle that involves three pegs (**L**, **M**, and **R**) and a set of disks. The goal is to move all disks from the **Left Peg (L)** to the **Right Peg (R)** while following these rules:
+1. Only **one disk** can be moved at a time.
 2. A **larger disk cannot be placed on top of a smaller disk**.
-3. The **Middle Peg (`M`)** can be used as an extra space to hold disks.
+3. The **Middle Peg (M)** can be used as an auxiliary peg.
 
-This project solves the Tower of Hanoi problem in **two ways**:
-- **Recursively**
-- **Iteratively (Using a Stack)**  
+In this project, we implemented **two solutions**:
+- **Recursive Solution**
+- **Iterative Solution (Using a Stack)**  
 
-It also includes **ASCII art visualization**, which shows how the disks move.
+Additionally, we added **ASCII art visualization** to show the movement of disks in the console.
 
 ---
 
 ## 2. Recursive Solution
-In the **recursive** method, the problem is broken into smaller steps:
-
-1. Move `n-1` disks from **L** to **M** (using **R** as a helper).
-2. Move the **largest disk** from **L** to **R**.
-3. Move `n-1` disks from **M** to **R** (using **L** as a helper).
+The recursive approach follows a **divide-and-conquer** strategy:
+1. Move `n-1` disks from **L** → **M** (using **R** as a helper).
+2. Move the **largest disk** from **L** → **R**.
+3. Move `n-1` disks from **M** → **R** (using **L** as a helper).
 
 ### **How It Works**
 ```csharp
@@ -40,17 +39,17 @@ class RecursiveHanoi
     }
 }
 ```
-This function keeps **calling itself** until all disks are moved.
+This method **breaks the problem into smaller parts** until all disks are moved.
 
 ---
 
 ## 3. Iterative Solution (Using Stack)
-Since **recursion** uses the system's **call stack**, we can **simulate recursion** using an **explicit stack**.
+Instead of using **recursion**, I simulate it with a **stack** to keep track of moves.
 
 ### **How It Works**
-- Instead of calling a function **recursively**, we store **each move** in a **stack**.
-- We then **process moves one by one**.
-- This ensures we follow the correct Tower of Hanoi sequence.
+- I push all moves into a **stack** and process them **one by one**.
+- The **stack follows the recursive order**, ensuring correct disk movement.
+- This prevents **stack overflow** when dealing with large `n`.
 
 ### **Code**
 ```csharp
@@ -85,17 +84,17 @@ class IterativeHanoi
     }
 }
 ```
-This **avoids recursion** while keeping the **correct order of moves**.
+This solution **removes recursion** while keeping the moves **in the correct order**.
 
 ---
 
 ## 4. ASCII Art Visualization
-To make the output **more interactive**, we use **ASCII art** to show the towers.
+To **enhance the experience**, we added **ASCII art** to **show the tower movements**.
 
 ### **How It Works**
-1. Each peg (`L`, `M`, `R`) is represented as a **stack**.
-2. After **every move**, we **clear the console** and **redraw the towers**.
-3. Disks are displayed using `=` symbols.
+1. Each peg (**L, M, R**) is stored as a **Stack<int>**.
+2. Every time a disk moves, the **console is updated** with `Console.Clear()`.
+3. Disks are displayed using **`=` symbols** for visualization.
 
 ### **Code**
 ```csharp
@@ -144,19 +143,19 @@ class HanoiVisualizer
         }
 
         Console.WriteLine("  L\t\t  M\t\t  R");
-        Thread.Sleep(500);
+        Thread.Sleep(800);
     }
 
     public static void MoveDisk(int disk, char from, char to)
     {
-        pegs[to].Push(pegs[from].Pop());
         Console.WriteLine($"Move disk {disk} from {from} to {to}");
+        pegs[to].Push(pegs[from].Pop());
         DrawPegs(pegs['L'].Count + pegs['M'].Count + pegs['R'].Count);
     }
 }
 ```
 ### **Expected Output**
-When we run:
+When I run:
 ```sh
 dotnet run -Recursive 4
 ```
@@ -164,28 +163,45 @@ or
 ```sh
 dotnet run -Iterative 4
 ```
-It prints moves **while updating the ASCII tower**.
+It prints **each move** while dynamically **updating the tower in ASCII**.
 
 ---
 
-## 5. Challenges We Faced
-1. **Stacking Disks in the Wrong Order**  
-   - Initially, the pegs **displayed the disks in reverse order** (smallest at the bottom).  
-   - We **fixed this** by correctly indexing the stack.
+## 5. Challenges Faced
+### ❌ **1. Incorrect Disk Stacking**
+- At first, disks were displayed **in the wrong order** (smallest at the bottom).
+- **Fix:** I adjusted the **indexing** when drawing the pegs.
 
-2. **Incorrect Moves in Iterative Solution**  
-   - The auxiliary peg calculation was incorrect.  
-   - We fixed this by properly determining the **helper peg**.
+### ❌ **2. Wrong Moves in the Iterative Solution**
+- The **auxiliary peg was being assigned incorrectly**.
+- **Fix:** I correctly determined the **helper peg** based on movement direction.
 
-3. **Console Not Updating Properly**  
-   - The ASCII visualization was **not clearing correctly**.  
-   - We **used `Console.Clear()`** to refresh the display.
+### ❌ **3. Console Output Not Refreshing Properly**
+- The **console was not updating** between moves.
+- **Fix:** I added `Console.Clear()` and `Thread.Sleep(800)` to refresh the display.
 
 ---
 
 ## 6. Conclusion
-- **Recursive and Iterative solutions work correctly.**
-- **ASCII visualization updates dynamically.**
-- **Challenges were solved, and the project meets all requirements.**
+- ✅ **Both Recursive and Iterative solutions work correctly.**
+- ✅ **The ASCII visualization updates dynamically.**
+- ✅ **Fixed multiple bugs to ensure correct disk movement.**
+- ✅ **This project successfully solves the Tower of Hanoi problem! 🎉**
+
+---
+## **7. How to Run the Project**
+### **Prerequisites**
+- Install **.NET SDK** from [here](https://dotnet.microsoft.com/download)
+- Open the terminal in **VS Code** or **Command Prompt**
+
+### **Run Recursive Solution**
+```sh
+dotnet run -Recursive 4
+```
+
+### **Run Iterative Solution**
+```sh
+dotnet run -Iterative 4
+```
 
 ---
