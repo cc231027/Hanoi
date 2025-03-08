@@ -1,4 +1,3 @@
-```md
 # 📜 Tower of Hanoi Report
 
 ## 1. Introduction
