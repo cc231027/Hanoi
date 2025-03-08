@@ -52,7 +52,7 @@ class HanoiVisualizer
     }
 
     Console.WriteLine("  L\t\t  M\t\t  R"); // Peg labels
-    Thread.Sleep(500); // Pause for animation effect
+    Thread.Sleep(800); // Pause for animation effect
     }
 
 
