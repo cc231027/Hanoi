@@ -85,8 +85,8 @@ This project is licensed under the MIT License. You are free to use, modify, and
 
 ## Acknowledgments
 * FH St. Pölten
-* Dr. Yun
-* Dr. Victor
+* Dr. Hsiang-Yun Wu
+* Dr. Victor Schetinger
 * .NET Documentation - Microsoft Docs
 * Tower of Hanoi Wiki - Wikipedia
 * C# Stack Class - Microsoft Docs
