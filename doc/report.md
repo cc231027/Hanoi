@@ -88,7 +88,7 @@ This solution **removes recursion** while keeping the moves **in the correct ord
 ---
 
 ## 4. ASCII Art Visualization
-To **enhance the experience**, we added **ASCII art** to **show the tower movements**.
+To **enhance the experience**, I added **ASCII art** to **show the tower movements**.
 
 ### **How It Works**
 1. Each peg (**L, M, R**) is stored as a **Stack<int>**.
